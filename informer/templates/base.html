@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+
+{% block html_attribs %} lang="ru"{% endblock %}
+
+{% block title %}{% block page_title %}{% endblock %} | {% block site_title %}EStore{% endblock %}{% endblock %}
+
+{% block metas %}
+    <meta charset="UTF-8">
+    {{ super() }}
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    {% block styles_inline %}{% endblock %}
+    {% block javascript_head %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ self.page_title() }}</h1>
+                <section>
+                    {% block page_content %}{% endblock %}
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {% block javascript %}{% endblock %}
+    {% block javascript_inline %}{% endblock %}
+{% endblock %}

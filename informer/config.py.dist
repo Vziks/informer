@@ -1,0 +1,22 @@
+config = dict(
+    SECRET_KEY='eafxEEw7K8fa3ydpatQWvrotmDni47Iq',
+    WTF_CSRF_SECRET_KEY='3zHA8b5pjbVOWZJ3aLJuttGcMnKpq0hJ',
+    TELEGRAM_KEY='bot_key',
+    MAIL={
+        'user': 'mail@mail.ru',
+        'password': 'password'
+    },
+    VIBER={
+        'name': 'PythonViberBot',
+        'avatar': 'http://site.com/avatar.jpg',
+        'auth_token': 'bot_key',
+    },
+    DEBUG=True,
+    PONY={
+        'provider': 'mysql',
+        'host': '127.0.0.1',
+        'user': 'root',
+        'passwd': '123',
+        'db': 'informer'
+    }
+)

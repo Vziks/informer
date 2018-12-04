@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_title %}Добавить бота{% endblock %}
+
+{% block page_content %}
+    {{ wtf.quick_form(form, id="form_bots_add") }}
+    <input type="submit" value="Добавить" form="form_bots_add">
+{% endblock %}

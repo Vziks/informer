@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_title %}
+Отредактировать проект "{{ project.name }}"
+{% endblock %}
+
+{% block page_content %}
+{{ project.name }}
+{{ project.sys_name }}
+{{ project.bots }}
+ {% for bot in project.bots %}
+    {{ bot.id }}
+{% endfor %}
+{{ wtf.quick_form(form, id="form_projects_edit") }}
+    <input type="submit" value="Изменить" form="form_projects_edit">
+{% endblock %}

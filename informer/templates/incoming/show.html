@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block page_title %}Входящий траффик "{{ incoming_traffic.frm }}"{% endblock %}
+
+{% block page_content %}
+    <p>Здесь могла быть подробная информация о сущности Входящий траффик</p>
+<h4>Тип</h4>
+{{incoming_traffic.type}}</br>
+<h4>От кого</h4>
+{{incoming_traffic.frm}}</br>
+<h4>Data</h4></br>
+<code>{{incoming_traffic.value}}</code>
+{% endblock %}
